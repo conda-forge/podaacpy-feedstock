@@ -1,6 +1,6 @@
 {% set name = "podaacpy" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "419a2f093d71c3d974254e3c0c51650574c69551cda2f0a3422b58e5cfa070bb" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "71cf4c5dff83f6b2c9298347f0f7271c454668c9e1ff0ad7ee655cef4d5d706d" %}
 
 package:
   name: {{ name|lower }}
