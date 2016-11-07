@@ -1,6 +1,6 @@
 {% set name = "podaacpy" %}
-{% set version = "1.5.0" %}
-{% set sha256 = "71cf4c5dff83f6b2c9298347f0f7271c454668c9e1ff0ad7ee655cef4d5d706d" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "98161b77cf6fe4ffd65f921159263cb4c3d7e5c34f9e24b8e11439726ee1c7e0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
