@@ -1,6 +1,6 @@
 {% set name = "podaacpy" %}
-{% set version = "1.6.0" %}
-{% set sha256 = "98161b77cf6fe4ffd65f921159263cb4c3d7e5c34f9e24b8e11439726ee1c7e0" %}
+{% set version = "1.7.0" %}
+{% set sha256 = "12ace92e1fdd2ffccb1799a2e1c7f2494cd30f1f01e0baa26ab83f7fbdf7097b" %}
 
 package:
   name: {{ name|lower }}
@@ -30,7 +30,7 @@ test:
     - podaac
 
 about:
-  home: https://github.com/lewismc/podaacpy
+  home: https://github.com/nasa/podaacpy
   license: Apache 2.0
   license_family: Apache
   license_file: LICENSE
