@@ -19,6 +19,8 @@ requirements:
   build:
     - python
     - setuptools
+  host:
+    - pip
   run:
     - python
     - beautifulsoup4
@@ -27,8 +29,6 @@ requirements:
     - future
     - pathlib2
     - requests
-  host:
-    - pip
 
 test:
   imports:
