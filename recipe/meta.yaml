@@ -1,6 +1,6 @@
 {% set name = "podaacpy" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "d8f561ba4206d466dffa7282d8575feb7f0be02bbfc754dac64eb4e22d177432" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "c689f3824df4ec92d5025486084f5e3d35bc3c7e4dad9a6532dfd036cc28fcc3" %}
 
 package:
   name: {{ name|lower }}
@@ -23,7 +23,10 @@ requirements:
   run:
     - python
     - beautifulsoup4
+    - configparser
+    - defusedxml
     - future
+    - pathlib2
     - requests
 
 test:
