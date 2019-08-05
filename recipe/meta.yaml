@@ -1,34 +1,42 @@
 {% set name = "podaacpy" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "d8f561ba4206d466dffa7282d8575feb7f0be02bbfc754dac64eb4e22d177432" %}
+{% set version = "2.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: "c689f3824df4ec92d5025486084f5e3d35bc3c7e4dad9a6532dfd036cc28fcc3"
+
 
 build:
-  skip: True  # [not py36]
-  number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
     - setuptools
+  host:
+    - python
+    - pip
   run:
     - python
     - beautifulsoup4
+    - configparser
+    - defusedxml
     - future
+    - pathlib2
     - requests
 
 test:
   imports:
     - podaac
+  requires:
+    - nose
+  commands:
+    - nosetests --verbosity=3
 
 about:
   home: https://github.com/nasa/podaacpy
