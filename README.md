@@ -201,4 +201,5 @@ Feedstock Maintainers
 
 * [@agoodm](https://github.com/agoodm/)
 * [@lewismc](https://github.com/lewismc/)
+* [@noah-de](https://github.com/noah-de/)
 
