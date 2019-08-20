@@ -1,23 +1,20 @@
-{% set name = "podaacpy" %}
 {% set version = "2.3.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: podaacpy
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "c689f3824df4ec92d5025486084f5e3d35bc3c7e4dad9a6532dfd036cc28fcc3"
+  url: https://pypi.io/packages/source/p/podaacpy/podaacpy-{{ version }}.tar.gz
+  sha256: c689f3824df4ec92d5025486084f5e3d35bc3c7e4dad9a6532dfd036cc28fcc3
 
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 2
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
-    - setuptools
   host:
     - python
     - pip
@@ -40,7 +37,7 @@ test:
 
 about:
   home: https://github.com/nasa/podaacpy
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: 'A python utility library for interacting with NASA JPLs PO.DAAC'
