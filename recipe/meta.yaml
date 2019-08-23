@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: podaacpy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/podaacpy/podaacpy-{{ version }}.tar.gz
-  sha256: c689f3824df4ec92d5025486084f5e3d35bc3c7e4dad9a6532dfd036cc28fcc3
+  sha256: adcca0a708cea648fe9622d6ded91c080efedb47db3ee76d6510447e654619b6
 
 
 build:
